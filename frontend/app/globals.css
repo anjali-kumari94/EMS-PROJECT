@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-canvas text-ink font-sans antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+::selection {
+  @apply bg-teal-light text-navy;
+}
+
+/* Visible keyboard focus everywhere, per accessibility baseline */
+:focus-visible {
+  outline: 2px solid #2F6F5E;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
